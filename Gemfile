@@ -7,9 +7,9 @@ gem 'rails', '3.2.8'
 
 gem 'sqlite3'
 
-#group :production do
+group :production do
 	gem 'mysql2'
-#end
+end
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -35,7 +35,7 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 # gem 'unicorn'
 
 # Deploy with Capistrano
-# gem 'capistrano'
+gem 'capistrano'
 
 # To use debugger
 # gem 'debugger'
