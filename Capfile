@@ -1,4 +1,5 @@
-load 'deploy'
+load 'deploy' if respond_to?(:namespace)
+
 # Uncomment if you are using Rails' asset pipeline
 load 'deploy/assets'
 

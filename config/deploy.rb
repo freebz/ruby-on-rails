@@ -1,13 +1,14 @@
 set :application, 'depot'
+set :domain, '192.168.0.99'
 set :repository,  'git://github.com/freebz/ruby-on-rails.git'
 
 #set :scm, :subversion
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
 #set :scm, :git
 
-role :web, "fx.myftp.org"                          # Your HTTP server, Apache/etc
-role :app, "fx.myftp.org"                          # This may be the same as your `Web` server
-role :db,  "fx.myftp.org", :primary => true # This is where Rails migrations will run
+role :web, domain                          # Your HTTP server, Apache/etc
+role :app, domain                          # This may be the same as your `Web` server
+role :db,  domain, :primary => true # This is where Rails migrations will run
 #role :db,  "your slave db-server here"
 
 # if you want to clean up old releases on each deploy uncomment this:
